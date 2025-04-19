@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  background-color: var(--off-white);
+  width: 80vw;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+ul.top-nav {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  color: var(--soft-red);
+}
+
+#hamburger {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5rem 0 3rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60% 40%;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+.hero {
+  grid-area: 1/1/2/3;
+  background-image: url("assets/images/image-web-3-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: var(--very-dark-blue);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 98%;
+  grid-area: 2/1;
+  justify-content: space-around;
+}
+
+article {
+  line-height: 1.5rem;
+}
+
+button {
+  background-color: var(--soft-red);
+  font-family: "Inter", sans-serif;
+  color: var(--very-dark-blue);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border: none;
+  width: 70%;
+  max-width: 12.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--very-dark-blue);
+  color: var(--off-white);
+  transition: all 0.4s ease-in;
+}
+
+.article-btn {
+  display: flex;
+  flex-direction: column;
+  grid-area: 2/2;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+aside {
+  grid-area: 1/3/3/4;
+  background-color: var(--very-dark-blue);
+  padding: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--soft-orange);
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--off-white);
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+h3:hover {
+  color: var(--soft-orange);
+}
+
+.intro {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.0187rem solid var(--grayish-blue);
+  color: hsla(233, 8%, 79%, 0.8);
+}
+
+#last-intro {
+  border-bottom: none;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  margin-bottom: 6.25rem;
+  gap: 1.5rem;
+}
+
+.bg {
+  width: 100%;
+}
+
+#bg1 {
+  background-image: url("assets/images/image-retro-pcs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg2 {
+  background-image: url("assets/images/image-top-laptops.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bg3 {
+  background-image: url("assets/images/image-gaming-growth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--soft-red);
+  letter-spacing: 0.0813rem;
+}
+
+.title {
+  color: var(--very-dark-blue);
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin: 0.625rem 0;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: var(--soft-red);
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  gap: 1.5rem;
+  grid-area: auto;
+}
+
+footer {
+  margin-bottom: 2.5rem;
+  color: var(--grayish-blue);
+}
+
+.hidden {
+  display: none;
+}
+
+/* hamburger side menu & overlay */
+
+.side-panel {
+  position: fixed;
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  z-index: 10;
+  width: 18.75rem;
+  top: 0rem;
+  right: -18.75rem;
+}
+
+ul.panel-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+}
+
+#close {
+  position: relative;
+  left: 90%;
+  margin-bottom: 6.25rem;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(236, 13%, 42%, 0.4);
+}
+
+/* responsive */
+
+@media (max-width: 62.5rem) {
+  body {
+    width: 90%;
+  }
+  .hero {
+    background-image: url(assets/images/image-web-3-mobile.jpg);
+  }
+  h1 {
+    font-size: 3.125rem;
+  }
+  section {
+    gap: 0.625rem;
+  }
+  .card {
+    gap: 0.5rem;
+  }
+  section {
+    grid-template-columns: 2fr;
+    gap: 2rem;
+  }
+  .bg {
+    width: 30%;
+    min-width: 8.75rem;
+    height: 14.375rem;
+  }
+  button {
+    width: 100%;
+  }
+  .card {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  body {
+    width: 100vw;
+  }
+  header {
+    margin: 0 2.5rem 2.5rem 2.5rem;
+    padding-top: 2rem;
+  }
+  h1 {
+    width: 70%;
+    line-height: 1.1;
+  }
+  ul.top-nav {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2.5rem;
+  }
+
+  aside {
+    margin-top: 2.5rem;
+  }
+  .hero {
+    width: 100%;
+    height: 25rem;
+  }
+  .card {
+    gap: 1rem;
+  }
+
+  section {
+    margin: 2.5rem;
+  }
+}
